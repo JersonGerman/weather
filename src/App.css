@@ -1,38 +1,148 @@
+body{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  background-color: #333;
+  margin: 0;
+}
+
+.loader {
+  margin: 0 auto;
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.alert{
+  position: relative;
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+.alert-danger{
+  color: #842029;
+  background-color: #f8d7da;
+  border-color: #f5c2c7;
+}
+
 .App {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
 }
 
 .App-logo {
-  height: 40vmin;
+  /* height: 40vmin; */
   pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.App .card{
+  margin: 1rem auto;
+  width: auto;
+  height: auto; 
+  border: 1px solid #333;
+  box-shadow: 3px 3px 8px #222;
+  border-radius: 20px;
   color: white;
+  /* background-image: url("https://assets.msn.com/weathermapdata/1/static/background/v2.0/compactads3/Cloudy 2.png"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #0D1941;
+}
+.App .car h2.disableBlur{
+  filter: blur(0);
+  -webkit-filter: blur(0);
+  -o-filter: blur(0);
+  -ms-filter: blur(0);
+  z-index: -4;
 }
 
-.App-link {
-  color: #61dafb;
+.App .card .description{
+  display: flex;
+  /* border: 1px solid #333; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App .card .description .img{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 50%;
+}
+.App .card .description .img div img{
+  display: block;
+  width: 200px;
+  font-size: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* .App .card .description .img i img{
+  display: block;
+  width: 100%;
+  font-size: 10rem; */
+/* } */
+.App .card .description .details{
+  width: 50%;
+  /* border: 1px solid #333; */
+}
+/* .App .card .description .details h4{ */
+  /* border: 1px solid #333; */
+/* } */
+.App .card .description .details ul li{
+  list-style: none;
+  /* border: 1px solid #333; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50px;
+}
+.App .card .description .details ul li i{
+  font-size: 26px;
+  width: 50px;
+}
+.App .card .description .details ul li img{
+  width: 50px;
+}
+.App .card .btn{
+  height: 80px;
+}
+
+.App .card .btn button{
+  /* width: 25%; */
+  height: 55px;
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+  background-color: #307bdf;
+  border: none;
+  border-right: 2px solid #333;
+  border-bottom: 2px solid #333;
+  border-radius: 15px;
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+  box-shadow: 3px 3px 6px #333;
+  transition: .3s all ease-in-out;
+}
+.App .card .btn button:active{
+  /* outline: 2px solid #444; */
+  box-shadow: 2px 2px 4px #111;
+  width: 24%;
+  height: 50px;
+  outline-width: 3px;
+  outline-offset: -3px;
+  font-size: 14px;
+}
+.App .card .btn button:hover{
+  cursor: pointer;
+  transform: rotate(360deg);
 }
